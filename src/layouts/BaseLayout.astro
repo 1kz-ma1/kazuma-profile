@@ -18,30 +18,40 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#090b10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="/">KAZUMA KINOSHITA</a>
+        <a class="brand" href="/" aria-label="Kazuma Kinoshita ホーム">KAZUMA KINOSHITA</a>
         <nav class="site-nav" aria-label="メインナビゲーション">
           <a href="/projects">Projects</a>
           <a href="/about">About</a>
           <a href="/blog">Blog</a>
-          <a href="https://github.com/1kz-ma1" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/1kz-ma1" target="_blank" rel="noreferrer">GitHub ↗</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <slot />
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>© {new Date().getFullYear()} Kazuma Kinoshita</span>
-        <span>Build value, not just software.</span>
+        <div>
+          <strong>Kazuma Kinoshita</strong>
+          <span>Product Developer</span>
+        </div>
+        <p>作って終わらせず、価値が生まれるところまで。</p>
+        <span>© {new Date().getFullYear()}</span>
       </div>
     </footer>
   </body>
