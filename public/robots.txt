@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kazuma-profile.onrender.com/sitemap.xml
