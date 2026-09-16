@@ -4,33 +4,125 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout
   title="About | Kazuma Kinoshita"
-  description="プロダクト開発者・木下和磨の考え方、開発姿勢、目指していること。"
+  description="プロダクト開発者・木下和磨の考え方、開発姿勢、AI活用、これまでの転機。"
 >
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">About</p>
       <h1>価値を見つけ、設計し、形にし、育てる。</h1>
       <p>
-        人の役に立つものを作りたい。その思いを起点に、今は「作ること」だけではなく、
-        実際に価値が生まれるところまでを開発だと考えています。
+        アプリやプロダクトを作ること自体ではなく、それによって実際に価値が生まれるところまでを開発だと考えています。
       </p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container grid">
+    <div class="container">
+      <p class="statement">
+        人の役に立つものを作りたい。その思いは、開発を始めた頃から変わっていません。
+        ただ今は、<strong>「作れば役に立つ」とは考えない</strong>ようになりました。
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">What I do</p>
+          <h2>プロダクト全体を一気通貫で考える。</h2>
+        </div>
+        <p>
+          創出したい価値を見つけ、その価値を生むために何を作るべきかを考え、設計し、実装します。
+          さらに完成後も、実際に価値を生めているかを見ながら改善を続けます。
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <p class="meta">Value</p>
+          <h3>何を作るかの前に、何を変えるか</h3>
+          <p>機能から考えるのではなく、ユーザーや事業にどんな変化を生みたいのかから逆算します。</p>
+        </article>
+        <article class="card">
+          <p class="meta">Perspective</p>
+          <h3>自分のためだけに作らない</h3>
+          <p>ユーザー・開発者・事業など複数の視点から、思い込みを離れてプロダクトを評価します。</p>
+        </article>
+        <article class="card">
+          <p class="meta">Cycle</p>
+          <h3>形にした後からが始まり</h3>
+          <p>利用・実績・フィードバックから学び、設計そのものを見直す改善サイクルを回します。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid two">
       <article class="card">
-        <h3>What I do</h3>
-        <p>価値の発見から設計・実装・評価・改善まで、プロダクト全体を一気通貫で考えます。</p>
+        <p class="meta">AI</p>
+        <h3>AIを、開発を代替するものではなく拡張する道具として使う</h3>
+        <p>
+          調査、思考整理、設計、実装、検証まで、AIを使って速度と質の両方を高めます。
+          大切なのはAIを使ったことではなく、その結果としてより良い判断とプロダクトにつなげることだと考えています。
+        </p>
       </article>
       <article class="card">
-        <h3>How I think</h3>
-        <p>自分のためだけに作らず、ユーザー・開発者・事業など多様な視点から客観的に評価します。</p>
+        <p class="meta">Direction</p>
+        <h3>仕事でも個人開発でも、プロダクトを成功へ近づける</h3>
+        <p>
+          受託では任されたプロダクトを、個人では自分で見つけた課題を起点に、作って終わりにせず価値のあるものへ育てることを目指しています。
+        </p>
       </article>
-      <article class="card">
-        <h3>How I use AI</h3>
-        <p>AIを思考・調査・設計・実装・検証の速度と質を高める道具として活用します。</p>
-      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Journey</p>
+        <h2>今の考え方につながった出来事。</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <time>2024.08</time>
+          <div>
+            <h3>Microsoft Hackathon / Dream</h3>
+            <p>
+              「夢」を目的・中間課題・行動へ分解し、ロードマップとして可視化するアプリをチームで開発。
+              リーダーとして、機能だけでなくチームの噛み合わせも設計対象だと学びました。
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time>2024–2026</time>
+          <div>
+            <h3>設計・実装・個人開発を重ねる</h3>
+            <p>Webアプリやゲームの開発を通して、実装だけでなく「なぜ作るのか」「どう運用されるのか」まで考える範囲を広げてきました。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time>2026</time>
+          <div>
+            <h3>Canovia</h3>
+            <p>
+              Dreamで扱った「目標を行動へ変える」という発想を、実行・記録・評価・再計画まで続くプロダクトとして再び設計しています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="callout">
+        <p><strong>このサイトについて</strong></p>
+        <p>
+          完成した実績だけを並べるのではなく、何を考えて作ったのか、考え方がどう変化したのかまで残します。
+          次に何を作るのかも含めて追ってもらえる場所にしていきます。
+        </p>
+      </div>
     </div>
   </section>
 </BaseLayout>
