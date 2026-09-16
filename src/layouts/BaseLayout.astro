@@ -10,6 +10,17 @@ const {
   title = 'Kazuma Kinoshita | Product Developer',
   description = '価値を見つけ、設計し、形にし、育てるプロダクト開発者・木下和磨の個人サイト。',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Kazuma Kinoshita',
+  alternateName: '木下和磨',
+  url: Astro.site?.toString() ?? canonicalURL.origin,
+  jobTitle: 'Product Developer',
+  sameAs: ['https://github.com/1kz-ma1'],
+};
 ---
 
 <!doctype html>
@@ -19,12 +30,17 @@ const {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#090b10" />
+    <link rel="canonical" href={canonicalURL} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kazuma Kinoshita" />
+    <meta property="og:locale" content="ja_JP" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <title>{title}</title>
   </head>
   <body>
