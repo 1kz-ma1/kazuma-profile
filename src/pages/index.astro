@@ -4,53 +4,106 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout>
   <section class="hero">
-    <div class="container">
-      <p class="eyebrow">Product Developer</p>
-      <h1>誰かの役に立つものを、役に立つところまでつくる。</h1>
-      <p class="lead">
-        価値を見つけ、その価値を生むために何を作るべきかを考え、設計し、形にする。
-        そして作って終わりにせず、ユーザー・開発者・事業の視点から評価と改善を重ねて育てていきます。
-      </p>
-      <div class="actions">
-        <a class="button primary" href="/projects">Projectsを見る</a>
-        <a class="button" href="/about">About</a>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Product Developer / Kazuma Kinoshita</p>
+        <h1>誰かの役に立つものを、役に立つところまでつくる。</h1>
+        <p class="lead">
+          価値を見つけ、その価値を生むために何を作るべきかを考え、設計し、形にする。
+          そして作って終わりにせず、ユーザー・開発者・事業の視点から評価と改善を重ねて育てていきます。
+        </p>
+        <div class="actions">
+          <a class="button primary" href="/projects/canovia">Canoviaを見る</a>
+          <a class="button" href="/projects">Projects</a>
+          <a class="button" href="/about">About</a>
+        </div>
       </div>
+      <aside class="hero-note">
+        <strong>What I'm building</strong>
+        <p>
+          長期目標を「計画して終わり」にせず、実行・記録・評価・再計画までつなぐCanoviaを継続開発しています。
+        </p>
+      </aside>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="section-heading">
+    <div class="container project-feature">
+      <div class="project-copy">
         <p class="eyebrow">Featured Project</p>
         <h2>Canovia</h2>
         <p>
-          目標から日々の行動までをつなぎ、継続的な改善を支えるプロダクト。
-          現在の代表プロジェクトとして、設計・実装・運用を継続しています。
+          目標・計画・タスク・実績をつなぎ、現在地から次に何をすべきかを整理するプロダクト。
+          固定された計画へ自分を合わせるのではなく、実際の行動から計画そのものを改善していくことを目指しています。
+        </p>
+        <div class="chips">
+          <span class="chip">Laravel</span>
+          <span class="chip">PHP</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">AI-assisted workflow</span>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="/projects/canovia">ケーススタディを見る</a>
+        </div>
+      </div>
+      <div class="project-visual" aria-label="Canoviaの運用サイクル">
+        <div class="product-diagram">
+          <div class="node"><strong>Goal / Plan</strong><span>目標を実行可能な計画へ</span></div>
+          <div class="arrow">↓</div>
+          <div class="node"><strong>Tasks / Action</strong><span>次の行動を明確にする</span></div>
+          <div class="arrow">↓</div>
+          <div class="node"><strong>Work Log / Review</strong><span>実績から現在地を評価する</span></div>
+          <div class="arrow">↓</div>
+          <div class="node"><strong>Re-plan</strong><span>現実に合わせて計画を更新する</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">How I Build</p>
+          <h2>作ることではなく、価値を生むところまで。</h2>
+        </div>
+        <p>
+          実装はゴールではありません。何のために作るのかを定義し、形にした後も複数の視点から検証して改善します。
         </p>
       </div>
-      <a class="button" href="/projects">プロジェクト一覧へ</a>
+      <div class="grid">
+        <article class="card">
+          <p class="meta">01 / Discover</p>
+          <h3>価値を見つける</h3>
+          <p>誰が何に困っているのか、何を変えれば価値になるのかを捉えます。</p>
+        </article>
+        <article class="card">
+          <p class="meta">02 / Design & Build</p>
+          <h3>価値から逆算して設計する</h3>
+          <p>必要な機能・構造・体験を考え、実際に使えるプロダクトとして形にします。</p>
+        </article>
+        <article class="card">
+          <p class="meta">03 / Evaluate & Improve</p>
+          <h3>客観的に育て続ける</h3>
+          <p>ユーザー・開発者・事業などの視点で評価し、改善サイクルを回します。</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">How I Build</p>
-        <h2>作ることではなく、価値を生むところまで。</h2>
+        <p class="eyebrow">Origin Story</p>
+        <h2>2024年のDreamから、2026年のCanoviaへ。</h2>
+        <p>
+          高校3年時のハッカソンで作った「Dream」は、夢を目的・課題・行動へ分解するアプリでした。
+          当時は気づいていませんでしたが、今振り返るとCanoviaにつながる最初の構想でした。
+        </p>
       </div>
-      <div class="grid">
-        <article class="card">
-          <h3>Discover</h3>
-          <p>誰に、どんな価値を届けるのかを見つけます。</p>
-        </article>
-        <article class="card">
-          <h3>Design & Build</h3>
-          <p>価値を実現するための構造を考え、プロダクトとして形にします。</p>
-        </article>
-        <article class="card">
-          <h3>Evaluate & Improve</h3>
-          <p>ユーザー・技術・事業など複数の視点で評価し、改善サイクルを回します。</p>
-        </article>
+      <div class="actions">
+        <a class="button" href="/blog/dream-hackathon">Dreamの記録を読む</a>
+        <a class="text-link" href="/projects/canovia">Canoviaとのつながりを見る →</a>
       </div>
     </div>
   </section>
