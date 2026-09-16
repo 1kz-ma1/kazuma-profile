@@ -4,4 +4,4 @@ services:
     runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
-    autoDeployTrigger: commit
+    autoDeployTrigger: checksPass
