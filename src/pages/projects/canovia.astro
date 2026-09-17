@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import '../../styles/canovia.css';
 ---
 
 <BaseLayout
   title="Canovia | Projects | Kazuma Kinoshita"
-  description="長期目標を計画・行動・実績・評価・再計画までつなぐCanoviaのケーススタディ。"
+  description="長期目標を計画・行動・実績・評価・再計画までつなぎ、AIとの継続的な開発・学習フローも支えるCanoviaのケーススタディ。"
 >
   <section class="case-hero">
     <div class="container">
@@ -42,29 +43,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   </section>
 
   <section class="section">
-    <div class="container project-feature">
-      <div class="project-copy">
-        <p class="eyebrow">Current Brand</p>
-        <h2>Canovia</h2>
-        <p>
-          開発初期の名称はPaceKeeper。プロダクトが単なる「ペース管理」から、目標・計画・行動・実績をつなぐ伴走型の体験へ広がったことで、現在はCanoviaとして育てています。
-        </p>
-        <div class="chips">
-          <span class="chip">Goal → Action</span>
-          <span class="chip">Reality-first planning</span>
-          <span class="chip">Continuous improvement</span>
+    <div class="container">
+      <article class="canovia-brand-card">
+        <div class="canovia-brand-copy">
+          <p class="eyebrow">Current Brand</p>
+          <h2>Canovia</h2>
+          <p>
+            開発初期の名称はPaceKeeper。単なる「ペース管理」から、目標・計画・行動・実績をつなぐ伴走型の体験へ広がったことで、現在はCanoviaとして育てています。
+          </p>
+          <div class="chips">
+            <span class="chip">Goal → Action</span>
+            <span class="chip">Reality-first planning</span>
+            <span class="chip">Continuous improvement</span>
+          </div>
         </div>
-      </div>
-      <div class="project-visual">
         <img
+          class="canovia-brand-icon"
           src="https://raw.githubusercontent.com/1kz-ma1/Canovia/main/public/icons/icon-512.png"
           alt="Canoviaの公式アプリアイコン"
-          width="260"
-          height="260"
+          width="112"
+          height="112"
           loading="lazy"
-          style="width:min(62%,260px); border-radius:26%; filter:drop-shadow(0 28px 60px rgba(105,126,255,.24));"
         />
-      </div>
+      </article>
     </div>
   </section>
 
@@ -98,6 +99,41 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <div class="flow-step"><span>03</span><strong>実行・作業ログ</strong></div>
         <div class="flow-step"><span>04</span><strong>現在地の評価</strong></div>
         <div class="flow-step"><span>05</span><strong>再計画</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section canovia-ai-section">
+    <div class="container">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">AI as a Workflow</p>
+          <h2>AIの利用を「点」ではなく、ひと続きの「線」にする。</h2>
+        </div>
+        <p>
+          私自身、いきなりAIに実装させるのではなく、まずAIと一緒に目的・仕様・構造を整理してから開発します。
+          その文脈を実装、実績、評価、次の計画までつなげることで、AIを一回ごとの質問ではなく継続する開発プロセスとして使っています。
+        </p>
+      </div>
+
+      <div class="ai-workflow" aria-label="AIとCanoviaを使った継続的な開発フロー">
+        <article><span>01</span><strong>考える</strong><small>目的や課題をAIと整理する</small></article>
+        <i aria-hidden="true">→</i>
+        <article><span>02</span><strong>構造化する</strong><small>仕様・計画・タスクへ落とす</small></article>
+        <i aria-hidden="true">→</i>
+        <article><span>03</span><strong>作る</strong><small>共有した文脈をもとに実装する</small></article>
+        <i aria-hidden="true">→</i>
+        <article><span>04</span><strong>記録する</strong><small>実際に起きたことを残す</small></article>
+        <i aria-hidden="true">→</i>
+        <article><span>05</span><strong>更新する</strong><small>結果から次の判断へつなげる</small></article>
+      </div>
+
+      <div class="canovia-ai-note">
+        <p>
+          <strong>Canoviaが目指しているのは、この流れを再現しやすくすることです。</strong>
+          仕様、計画、タスク、実績を別々の場所に散らさず、一つの文脈として持たせることで、AIへ毎回ゼロから説明し直す負担を減らす。
+          AI活用を「便利な一機能」にせず、思考から実行、振り返りまで立体的に接続するための土台としてCanoviaを使える状態を目指しています。
+        </p>
       </div>
     </div>
   </section>
@@ -147,10 +183,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
       </article>
       <article class="card">
-        <p class="meta">AI workflow</p>
-        <h3>AIに文脈を渡し、更新案を構造化する</h3>
+        <p class="meta">AI continuity</p>
+        <h3>AIとの文脈を、計画と実績につなげる</h3>
         <p>
-          AIへ丸投げするのではなく、現在の計画や実績を整理したプロンプトを生成し、得られた更新案を構造化データとして確認してから反映する設計を進めています。
+          仕様を一緒に考える段階から、実装、結果、次の更新までを同じ流れで扱う。AIへの説明を毎回リセットせず、継続する文脈として利用できる形を目指しています。
         </p>
       </article>
       <article class="card">
