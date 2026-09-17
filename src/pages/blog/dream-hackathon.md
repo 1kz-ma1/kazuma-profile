@@ -3,7 +3,7 @@ layout: ../../layouts/ArticleLayout.astro
 title: "ハッカソンで気づいた “チームが噛み合う設計” の重要性"
 description: "2024年、高校3年時にMicrosoftのハッカソンでDreamを開発した記録と、2026年に気づいたCanoviaとのつながり。"
 date: "2024年08月09日"
-updated: "2026年09月16日"
+updated: "2026年09月17日"
 category: "Event / Product Story"
 ---
 
@@ -21,11 +21,21 @@ category: "Event / Product Story"
 **開催日程：** 2024年8月5日・6日・8日・9日（全4日間）  
 **開催場所：** 日本マイクロソフト 品川本社
 
+<figure class="article-media article-media-wide">
+  <img src="/images/blog/dream/microsoft-team.webp" alt="日本マイクロソフト品川本社で行われたハッカソン会場での写真" loading="lazy" />
+  <figcaption>2024年8月、日本マイクロソフト 品川本社で開催されたハッカソン。</figcaption>
+</figure>
+
 ## 概要
 
 私たちのチームは「Dream」というアプリを開発しました。テーマは「わくわく」。抽象的な“夢”をAIと組み合わせて、**目的 → 中間課題 → 行動**へと分解し、ロードマップを自動生成して可視化する体験にフォーカスしています。
 
 使用技術は **Microsoft Power Apps（ローコード）** と **生成AI（必須テーマ）** です。
+
+<figure class="article-media">
+  <img src="/images/blog/dream/presentation.webp" alt="Power Appsで開発したDreamを発表している様子" loading="lazy" />
+  <figcaption>Dreamのコンセプトと実装した体験を発表。短期開発だったからこそ、機能とチームの両方を設計する必要がありました。</figcaption>
+</figure>
 
 ## 私の担当（リーダー）
 
