@@ -1,18 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/blog.css';
 ---
 
 <BaseLayout
   title="Blog | Kazuma Kinoshita"
-  description="開発記録、設計思想、技術、そして過去から現在までの考え方の変化を残す場所。"
+  description="プロダクト、AI、開発思想、キャリア、学習と問題解決。過去から現在までの考え方と実践を残す場所。"
 >
   <section class="page-hero">
     <div class="container">
       <p class="eyebrow">Blog / Notes</p>
       <h1>考えたことと、変わってきたことを残す。</h1>
       <p>
-        過去の記事も、その時点で何を考えていたかが分かる記録として残します。
-        現在の視点からの追記を加えながら、プロダクトと自分自身の変化をたどれる場所にします。
+        完成した知識だけでなく、何をきっかけに考え、どう問題を捉え直したのかまで記録します。
+        過去の記事は当時の意味を残し、現在との違いがある場合は追記として分けています。
       </p>
     </div>
   </section>
@@ -20,17 +21,92 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section">
     <div class="container">
       <div class="section-heading">
-        <p class="eyebrow">From the archive</p>
-        <h2>最初に残したい記録。</h2>
+        <p class="eyebrow">Topics</p>
+        <h2>プロダクトだけでなく、考え方と学びの過程も。</h2>
+      </div>
+      <div class="blog-category-grid">
+        <div class="blog-category-card">
+          <span>Product</span>
+          <strong>Product / Project Story</strong>
+          <p>作品が生まれた背景、失敗、設計判断、その後の変化。</p>
+        </div>
+        <div class="blog-category-card">
+          <span>Thinking</span>
+          <strong>AI & DX</strong>
+          <p>AIをどう仕組みに組み込み、人との協働を設計するか。</p>
+        </div>
+        <div class="blog-category-card">
+          <span>Thinking</span>
+          <strong>Development</strong>
+          <p>課題の捉え方、技術、設計、プロダクト開発で大切にしていること。</p>
+        </div>
+        <div class="blog-category-card">
+          <span>Career</span>
+          <strong>Career / Reflection</strong>
+          <p>進路や経験を通して、自分の軸がどう変わったのか。</p>
+        </div>
+        <div class="blog-category-card learning">
+          <span>Learning</span>
+          <strong>Learning / Problem Solving</strong>
+          <p>APや今後の資格学習を、合否だけでなく問題解決の型として残す。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Archive & Notes</p>
+        <h2>現在につながっている記録。</h2>
       </div>
       <div class="article-list">
         <article class="article-card">
+          <time class="date" datetime="2026-04-30">2026.04.30</time>
+          <div class="article-card-main">
+            <span class="article-category">Career / Reflection</span>
+            <h2><a href="/blog/job-hunting-seven-months">7カ月の就活を通して</a></h2>
+            <p>ユーザー視点という抽象的な軸から、「価値を捉え、技術を手段として解決へつなぐ」考えへ変化した記録。</p>
+          </div>
+          <a class="text-link" href="/blog/job-hunting-seven-months">Read →</a>
+        </article>
+
+        <article class="article-card">
+          <time class="date" datetime="2026-02-02">2026.02.02</time>
+          <div class="article-card-main">
+            <span class="article-category">Thinking / AI & DX</span>
+            <h2><a href="/blog/dx-ai-ten-years-later">「DX×AIが変える、10年後の日本」を作った理由</a></h2>
+            <p>祖母の入院手続きを起点に、電子化からAI、さらに分野横断の仕組みへ問題の捉え方が深まった過程。</p>
+          </div>
+          <a class="text-link" href="/blog/dx-ai-ten-years-later">Read →</a>
+        </article>
+
+        <article class="article-card">
+          <time class="date" datetime="2026-01-28">2026.01.28</time>
+          <div class="article-card-main">
+            <span class="article-category">Thinking / AI & DX</span>
+            <h2><a href="/blog/dx-ai-beyond-digitization">DX × AI：電子化の限界を超えて、仕組みそのものを進化させる</a></h2>
+            <p>AIを効率化の道具で終わらせず、人と協働しながら業務フローそのものを再設計するという考え。</p>
+          </div>
+          <a class="text-link" href="/blog/dx-ai-beyond-digitization">Read →</a>
+        </article>
+
+        <article class="article-card">
+          <time class="date" datetime="2026-01-27">2026.01.27</time>
+          <div class="article-card-main">
+            <span class="article-category">Thinking / Development</span>
+            <h2><a href="/blog/engineering-principles">エンジニアとして大切にしているテーマ集</a></h2>
+            <p>課題解決・技術・設計・仕事・DX。現在のProduct Developerとしての思想につながる、2026年1月時点の記録。</p>
+          </div>
+          <a class="text-link" href="/blog/engineering-principles">Read →</a>
+        </article>
+
+        <article class="article-card">
           <time class="date" datetime="2024-08-09">2024.08.09</time>
-          <div>
+          <div class="article-card-main">
+            <span class="article-category">Product / Project Story</span>
             <h2><a href="/blog/dream-hackathon">ハッカソンで気づいた “チームが噛み合う設計” の重要性</a></h2>
-            <p>
-              Microsoftのハッカソンで「Dream」を開発した記録。2026年に振り返ると、DreamはCanoviaにつながる最初の構想でもありました。
-            </p>
+            <p>MicrosoftのハッカソンでDreamを開発した記録。Canoviaにつながる最初のプロダクト構想でもありました。</p>
           </div>
           <a class="text-link" href="/blog/dream-hackathon">Read →</a>
         </article>
@@ -39,12 +115,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <section class="section">
+    <div class="container blog-learning-note">
+      <div>
+        <p class="eyebrow">Learning / Problem Solving</p>
+        <h2>資格も、問題の解き方を育てる記録にする。</h2>
+      </div>
+      <p>
+        今後は応用情報技術者試験（AP）や、仕事で必要になるマネジメント系の学習もここへ残します。
+        点数や合否だけではなく、「どう読み、どう分解し、どの型を次の開発や仕事へ持ち帰ったか」を中心に記録するカテゴリです。
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container">
       <div class="callout">
         <p><strong>旧サイトの記事について</strong></p>
         <p>
-          当時の考えを現在の自分に合わせて書き換えるのではなく、原文の意味を残したまま移行します。
-          現在と考え方が変わった部分は、必要に応じて「現在の追記」として区別して残します。
+          当時の考えを現在の自分に合わせて書き換えるのではなく、原文の意味を残しながら読みやすく整理しています。
+          現在と考え方が変わった部分は、必要に応じて「現在の追記」として区別しています。
         </p>
       </div>
     </div>
