@@ -395,7 +395,19 @@
 
 @media (max-width: 700px) {
   .home-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     padding-top: 3rem;
+    background:
+      linear-gradient(90deg, rgba(9, 11, 16, .98) 0%, rgba(9, 11, 16, .9) 52%, rgba(9, 11, 16, .62) 100%),
+      linear-gradient(180deg, rgba(9, 11, 16, .18) 0%, rgba(9, 11, 16, .98) 92%),
+      url('/images/profile/kazuma.webp') right -2rem top 1rem / 72% auto no-repeat;
+  }
+
+  .home-hero-grid {
+    position: relative;
+    z-index: 1;
   }
 
   .home-name {
@@ -410,9 +422,8 @@
     font-size: .95rem;
   }
 
-  .home-portrait,
-  .home-portrait img {
-    min-height: 390px;
+  .home-portrait {
+    display: none;
   }
 
   .home-discovery,
