@@ -192,11 +192,75 @@
   border-color: #3e4a61;
 }
 
-.home-feature-project-image {
-  width: 100%;
+.home-feature-project-visual {
+  position: relative;
+  display: flex;
+  min-height: clamp(260px, 42vw, 500px);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.2rem, 4vw, 3rem);
+  padding: clamp(2rem, 6vw, 5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(66, 202, 255, .28), transparent 24rem),
+    radial-gradient(circle at 78% 30%, rgba(156, 102, 255, .28), transparent 26rem),
+    radial-gradient(circle at 64% 88%, rgba(255, 190, 86, .12), transparent 20rem),
+    linear-gradient(145deg, #071022, #0c1730 55%, #090d1c);
+}
+
+.home-feature-project-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .42;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(117,205,255,.9) 0 1px, transparent 1.6px);
+  background-size: 74px 74px, 113px 113px;
+  background-position: 12px 18px, 41px 63px;
+  pointer-events: none;
+}
+
+.home-feature-project-icon {
+  position: relative;
+  z-index: 1;
+  width: clamp(92px, 16vw, 148px);
   height: auto;
-  aspect-ratio: 1491 / 1055;
-  object-fit: cover;
+  border-radius: 24%;
+  box-shadow: 0 28px 70px rgba(0,0,0,.42), 0 0 50px rgba(100,166,255,.22);
+}
+
+.home-feature-project-brand {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+.home-feature-project-brand span,
+.home-feature-project-brand strong,
+.home-feature-project-brand small {
+  display: block;
+}
+
+.home-feature-project-brand span {
+  color: #a8d7ff;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .24em;
+}
+
+.home-feature-project-brand strong {
+  margin-top: .6rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4.8vw, 4rem);
+  line-height: 1.18;
+}
+
+.home-feature-project-brand small {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: .86rem;
+  letter-spacing: .08em;
 }
 
 .home-feature-project-copy {
@@ -236,29 +300,39 @@
 }
 
 .home-story-section {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(5rem, 10vw, 9rem);
+  background:
+    linear-gradient(90deg, rgba(7, 9, 14, .98) 0%, rgba(7, 9, 14, .91) 38%, rgba(7, 9, 14, .70) 68%, rgba(7, 9, 14, .50) 100%),
+    linear-gradient(180deg, rgba(7, 9, 14, .36), rgba(7, 9, 14, .94)),
+    url('/images/blog/dream/microsoft-team.jpg') center 44% / cover no-repeat;
+}
+
+.home-story-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(9,11,16,.04), rgba(9,11,16,.52) 72%, rgba(9,11,16,.88));
+  pointer-events: none;
 }
 
 .home-story-grid {
   display: grid;
-  grid-template-columns: minmax(320px, .9fr) minmax(0, 1.1fr);
-  gap: clamp(2rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 760px) 1fr;
   align-items: center;
+  min-height: 420px;
 }
 
-.home-story-photo {
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
+.home-story-copy {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(255,255,255,.09);
   border-radius: 28px;
-  background: var(--surface);
-  box-shadow: 0 30px 80px rgba(0,0,0,.24);
-}
-
-.home-story-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  background: rgba(7, 9, 14, .52);
+  box-shadow: 0 28px 80px rgba(0,0,0,.3);
+  backdrop-filter: blur(10px);
 }
 
 .home-story-copy h2 {
@@ -388,9 +462,6 @@
     flex-direction: column;
   }
 
-  .home-story-photo {
-    max-width: 700px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -399,10 +470,30 @@
     isolation: isolate;
     overflow: hidden;
     padding-top: 3rem;
+    background: var(--bg);
+  }
+
+  .home-hero::before {
+    content: '';
+    position: absolute;
+    inset: -1rem;
+    z-index: 0;
+    background: url('/images/profile/kazuma.webp') right -2.5rem top 1rem / 74% auto no-repeat;
+    filter: blur(8px) brightness(.55);
+    transform: scale(1.04);
+    opacity: .82;
+    pointer-events: none;
+  }
+
+  .home-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     background:
-      linear-gradient(90deg, rgba(9, 11, 16, .98) 0%, rgba(9, 11, 16, .9) 52%, rgba(9, 11, 16, .62) 100%),
-      linear-gradient(180deg, rgba(9, 11, 16, .18) 0%, rgba(9, 11, 16, .98) 92%),
-      url('/images/profile/kazuma.webp') right -2rem top 1rem / 72% auto no-repeat;
+      linear-gradient(90deg, rgba(9,11,16,1) 0%, rgba(9,11,16,.99) 31%, rgba(9,11,16,.91) 48%, rgba(9,11,16,.68) 68%, rgba(9,11,16,.18) 100%),
+      linear-gradient(180deg, rgba(9,11,16,.15) 0%, rgba(9,11,16,.28) 54%, rgba(9,11,16,.98) 100%);
+    pointer-events: none;
   }
 
   .home-hero-grid {
@@ -440,6 +531,18 @@
     margin-top: .28rem;
   }
 
+  .home-feature-project-visual {
+    min-height: 300px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+  }
+
+  .home-feature-project-brand strong {
+    font-size: clamp(1.7rem, 8.5vw, 2.6rem);
+  }
+
   .home-feature-project-copy {
     align-items: flex-start;
     flex-direction: column;
@@ -449,6 +552,20 @@
 
   .home-feature-project-copy p {
     font-size: .92rem;
+  }
+
+  .home-story-section {
+    background-position: 58% 38%;
+  }
+
+  .home-story-grid {
+    min-height: 560px;
+  }
+
+  .home-story-copy {
+    align-self: end;
+    padding: 1.1rem;
+    background: rgba(7,9,14,.72);
   }
 
   .home-story-line {
