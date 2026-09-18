@@ -373,7 +373,6 @@
 
 @media (max-width: 900px) {
   .home-hero-grid,
-  .home-work-grid,
   .home-story-grid,
   .home-about-grid {
     grid-template-columns: 1fr;
@@ -428,17 +427,6 @@
 
   .home-discovery strong {
     margin-top: .28rem;
-  }
-
-  .home-work-card-copy {
-    left: 1.1rem;
-    right: 1.1rem;
-    bottom: 1.1rem;
-  }
-
-  .home-work-card-copy p {
-    max-width: 74%;
-    font-size: .93rem;
   }
 
   .home-feature-project-copy {
