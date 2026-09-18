@@ -251,7 +251,7 @@
 
 .home-feature-project-brand strong {
   margin-top: .6rem;
-  font-family: var(--font-heading);
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', Georgia, serif;
   font-size: clamp(1.8rem, 4.8vw, 4rem);
   line-height: 1.18;
 }
