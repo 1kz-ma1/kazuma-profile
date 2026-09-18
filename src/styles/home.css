@@ -1,11 +1,42 @@
 .home-hero {
-  padding: clamp(4rem, 8vw, 7rem) 0 clamp(3rem, 7vw, 5.5rem);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(780px, calc(100svh - 72px));
+  display: grid;
+  align-items: center;
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0 clamp(4rem, 7vw, 6rem);
+  background: var(--bg);
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: -1.5rem;
+  z-index: 0;
+  background: url('/images/profile/kazuma.webp') right 2vw center / min(47vw, 620px) auto no-repeat;
+  filter: blur(5px) brightness(.58);
+  transform: scale(1.03);
+  opacity: .88;
+  pointer-events: none;
+}
+
+.home-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(9,11,16,1) 0%, rgba(9,11,16,.995) 30%, rgba(9,11,16,.93) 47%, rgba(9,11,16,.66) 67%, rgba(9,11,16,.16) 100%),
+    linear-gradient(180deg, rgba(9,11,16,.08) 0%, rgba(9,11,16,.18) 58%, rgba(9,11,16,.92) 100%);
+  pointer-events: none;
 }
 
 .home-hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, .72fr);
-  gap: clamp(2rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 760px) 1fr;
   align-items: center;
 }
 
@@ -46,58 +77,6 @@
   margin: 1.15rem 0 0;
   color: var(--muted);
   font-size: 1rem;
-}
-
-.home-portrait {
-  position: relative;
-  margin: 0;
-  min-height: 520px;
-  border: 1px solid var(--line);
-  border-radius: 32px;
-  overflow: hidden;
-  background: var(--surface);
-  box-shadow: 0 36px 90px rgba(0, 0, 0, .3);
-}
-
-.home-portrait::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 52%, rgba(6, 9, 16, .92));
-  pointer-events: none;
-}
-
-.home-portrait img {
-  width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.home-portrait-caption {
-  position: absolute;
-  z-index: 2;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.2rem;
-}
-
-.home-portrait-caption span,
-.home-portrait-caption strong {
-  display: block;
-}
-
-.home-portrait-caption span {
-  color: var(--muted);
-  font-size: .82rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.home-portrait-caption strong {
-  margin-top: .15rem;
-  font-size: 1.08rem;
 }
 
 .home-discovery {
@@ -452,11 +431,6 @@
     grid-template-columns: 1fr;
   }
 
-  .home-portrait,
-  .home-portrait img {
-    min-height: 460px;
-  }
-
   .home-section-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -466,39 +440,23 @@
 
 @media (max-width: 700px) {
   .home-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
+    min-height: auto;
     padding-top: 3rem;
-    background: var(--bg);
   }
 
   .home-hero::before {
-    content: '';
-    position: absolute;
     inset: -1rem;
-    z-index: 0;
-    background: url('/images/profile/kazuma.webp') right -2.5rem top 1rem / 74% auto no-repeat;
+    background-position: right -2.5rem top 1rem;
+    background-size: 74% auto;
     filter: blur(8px) brightness(.55);
     transform: scale(1.04);
     opacity: .82;
-    pointer-events: none;
   }
 
   .home-hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 0;
     background:
       linear-gradient(90deg, rgba(9,11,16,1) 0%, rgba(9,11,16,.99) 31%, rgba(9,11,16,.91) 48%, rgba(9,11,16,.68) 68%, rgba(9,11,16,.18) 100%),
       linear-gradient(180deg, rgba(9,11,16,.15) 0%, rgba(9,11,16,.28) 54%, rgba(9,11,16,.98) 100%);
-    pointer-events: none;
-  }
-
-  .home-hero-grid {
-    position: relative;
-    z-index: 1;
   }
 
   .home-name {
@@ -511,10 +469,6 @@
 
   .home-intro {
     font-size: .95rem;
-  }
-
-  .home-portrait {
-    display: none;
   }
 
   .home-discovery,
