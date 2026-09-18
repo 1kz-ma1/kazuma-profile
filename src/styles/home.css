@@ -214,36 +214,6 @@
   background: linear-gradient(180deg, rgba(4, 7, 14, .06) 25%, rgba(4, 7, 14, .96) 100%);
 }
 
-.home-work-icon {
-  position: absolute;
-  z-index: 4;
-  top: 1.15rem;
-  right: 1.15rem;
-  width: 70px;
-  height: 70px;
-  border-radius: 24%;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .32);
-}
-
-.home-ui-peek {
-  position: absolute;
-  z-index: 2;
-  right: 6.5rem;
-  bottom: -3.3rem;
-  width: min(28%, 170px);
-  padding: .45rem;
-  border: 1px solid rgba(255,255,255,.16);
-  border-radius: 24px;
-  background: rgba(7, 11, 22, .82);
-  box-shadow: 0 24px 60px rgba(0,0,0,.35);
-  transform: rotate(4deg);
-}
-
-.home-ui-peek img {
-  display: block;
-  width: 100%;
-  border-radius: 18px;
-}
 
 .home-work-card-copy {
   position: absolute;
