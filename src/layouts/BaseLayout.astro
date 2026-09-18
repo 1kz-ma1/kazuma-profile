@@ -5,14 +5,21 @@ import '../styles/typography.css';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
 const {
   title = 'Kazuma Kinoshita | Product Developer',
   description = '価値を見つけ、設計し、形にし、育てるプロダクト開発者・木下和磨の個人サイト。',
+  image,
+  imageAlt = 'Kazuma Kinoshita | Product Developer',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
+const socialImageURL = image
+  ? new URL(image, Astro.site ?? Astro.url.origin).toString()
+  : undefined;
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
@@ -38,7 +45,11 @@ const structuredData = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta name="twitter:card" content="summary_large_image" />
+    {socialImageURL && <meta property="og:image" content={socialImageURL} />}
+    {socialImageURL && <meta property="og:image:alt" content={imageAlt} />}
+    <meta name="twitter:card" content={socialImageURL ? 'summary_large_image' : 'summary'} />
+    {socialImageURL && <meta name="twitter:image" content={socialImageURL} />}
+    {socialImageURL && <meta name="twitter:image:alt" content={imageAlt} />}
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
