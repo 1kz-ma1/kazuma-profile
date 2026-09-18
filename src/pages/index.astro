@@ -6,8 +6,8 @@ import '../styles/home.css';
 <BaseLayout
   title="Kazuma Kinoshita | Product Developer"
   description="プロダクト開発者・木下和磨の個人サイト。Canoviaを中心に、作っているもの、考えていること、これまでの開発の流れを紹介します。"
-  image="/images/projects/canovia/showcase.webp"
-  imageAlt="Canovia — 今日の一歩を、未来につなげる。"
+  image="/images/projects/canovia/app-icon.png"
+  imageAlt="Canovia app icon"
 >
   <section class="home-hero">
     <div class="container home-hero-grid">
@@ -57,14 +57,14 @@ import '../styles/home.css';
       </div>
 
       <a class="home-feature-project" href="/projects/canovia" aria-label="Canoviaのケーススタディを見る">
-        <img
-          class="home-feature-project-image"
-          src="/images/projects/canovia/showcase.webp"
-          alt="Canoviaのブランドビジュアルとホーム・ロードマップなどの実画面"
-          width="1000"
-          height="708"
-          loading="lazy"
-        />
+        <div class="home-feature-project-visual" aria-hidden="true">
+          <img class="home-feature-project-icon" src="/images/projects/canovia/app-icon.png" alt="" width="148" height="148" loading="lazy" />
+          <div class="home-feature-project-brand">
+            <span>CANOVIA</span>
+            <strong>今日の一歩を、未来につなげる。</strong>
+            <small>Goal → Action → Reality → Next</small>
+          </div>
+        </div>
         <div class="home-feature-project-copy">
           <div>
             <p class="meta">Featured Project / 2026 —</p>
@@ -79,15 +79,6 @@ import '../styles/home.css';
 
   <section class="section home-story-section">
     <div class="container home-story-grid">
-      <figure class="home-story-photo">
-        <img
-          src="/images/blog/dream/microsoft-team.jpg"
-          alt="Microsoftのハッカソン会場でのチーム写真"
-          width="900"
-          height="675"
-          loading="lazy"
-        />
-      </figure>
       <div class="home-story-copy">
         <p class="eyebrow">2024 → 2026</p>
         <h2>同じ問いを、プロダクトとして解き直している。</h2>
