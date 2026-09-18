@@ -22,7 +22,7 @@ category: "Event / Product Story"
 **開催場所：** 日本マイクロソフト 品川本社
 
 <figure class="article-media article-media-wide">
-  <img src="/images/blog/dream/microsoft-team.webp" alt="日本マイクロソフト品川本社で行われたハッカソン会場での写真" loading="lazy" />
+  <img src="/images/blog/dream/microsoft-team.jpg" alt="日本マイクロソフト品川本社で行われたハッカソン会場での写真" width="1170" height="878" loading="lazy" />
   <figcaption>2024年8月、日本マイクロソフト 品川本社で開催されたハッカソン。</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ category: "Event / Product Story"
 使用技術は **Microsoft Power Apps（ローコード）** と **生成AI（必須テーマ）** です。
 
 <figure class="article-media">
-  <img src="/images/blog/dream/presentation.webp" alt="Power Appsで開発したDreamを発表している様子" loading="lazy" />
+  <img src="/images/blog/dream/presentation.jpg" alt="Power Appsで開発したDreamを発表している様子" width="1170" height="780" loading="lazy" />
   <figcaption>Dreamのコンセプトと実装した体験を発表。短期開発だったからこそ、機能とチームの両方を設計する必要がありました。</figcaption>
 </figure>
 
