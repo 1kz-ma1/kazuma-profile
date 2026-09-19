@@ -1,3 +1,24 @@
+.canovia-showcase-section {
+  padding-top: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.canovia-showcase-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .3);
+}
+
+.canovia-showcase-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1491 / 1055;
+  object-fit: cover;
+}
+
 .canovia-brand-card {
   position: relative;
   display: grid;
@@ -128,6 +149,14 @@
 }
 
 @media (max-width: 700px) {
+  .canovia-showcase-section {
+    padding-top: .75rem;
+  }
+
+  .canovia-showcase-figure {
+    border-radius: 22px;
+  }
+
   .canovia-brand-card {
     grid-template-columns: 1fr;
     padding: 1.25rem;
