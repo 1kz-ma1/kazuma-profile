@@ -192,3 +192,181 @@
     padding: 1.1rem 1.15rem;
   }
 }
+
+
+.canovia-product-ui-section {
+  position: relative;
+  overflow: clip;
+}
+
+.canovia-product-ui-section::before {
+  content: '';
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  left: 50%;
+  top: 9rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(88, 115, 255, .08);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.canovia-ui-heading,
+.canovia-dashboard-frame,
+.canovia-ui-story-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.canovia-dashboard-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #303b50;
+  border-radius: 28px;
+  background: #0d1119;
+  box-shadow: 0 34px 100px rgba(0, 0, 0, .34);
+}
+
+.canovia-screen-chrome {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .025);
+}
+
+.canovia-screen-chrome span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #566176;
+}
+
+.canovia-screen-chrome small {
+  margin-left: .55rem;
+  color: #7f899c;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+
+.canovia-dashboard-frame > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.canovia-dashboard-frame figcaption,
+.canovia-timer-frame figcaption {
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.canovia-dashboard-frame figcaption {
+  padding: .85rem 1rem 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.canovia-ui-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.canovia-ui-story {
+  min-width: 0;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: linear-gradient(150deg, rgba(138,180,255,.055), rgba(255,255,255,.015));
+}
+
+.canovia-ui-story h3 {
+  margin: 0;
+  max-width: 620px;
+  font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+  line-height: 1.18;
+}
+
+.canovia-ui-story > p:not(.eyebrow),
+.canovia-ui-story-copy > p:not(.eyebrow) {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+.canovia-ui-story-timer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.canovia-timer-frame {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 210px);
+  padding: .65rem;
+  border: 1px solid #34415a;
+  border-radius: 26px;
+  background: rgba(9, 11, 16, .72);
+  box-shadow: 0 24px 70px rgba(0,0,0,.3);
+}
+
+.canovia-timer-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.canovia-timer-frame figcaption {
+  padding: .7rem .2rem .1rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .canovia-ui-story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .canovia-dashboard-frame {
+    border-radius: 20px;
+  }
+
+  .canovia-screen-chrome {
+    min-height: 36px;
+    padding-inline: .8rem;
+  }
+
+  .canovia-screen-chrome small {
+    font-size: .66rem;
+  }
+
+  .canovia-dashboard-frame figcaption {
+    padding: .75rem .85rem .85rem;
+  }
+
+  .canovia-ui-story {
+    padding: 1.2rem;
+  }
+
+  .canovia-ui-story-timer {
+    grid-template-columns: minmax(0, 1fr) minmax(120px, 155px);
+    gap: 1rem;
+  }
+
+  .canovia-timer-frame {
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .canovia-timer-frame img {
+    border-radius: 15px;
+  }
+}
